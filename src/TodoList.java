@@ -8,10 +8,12 @@ public class TodoList {
     static List<String> todoList = new ArrayList<>();
 
     public static void main(String[] args) {
-        start();
+        // Запуск приложения
+        startTodo();
     }
 
-    public static void start() {
+    public static void startTodo() {
+        // Запрос действий
         System.out.println("Добро пожаловать в список дел (TODO List)");
 
         while (true) {
@@ -45,6 +47,7 @@ public class TodoList {
     }
 
     public static void showMenu() {
+        // Вывод меню
         System.out.println("\nTODO");
         System.out.println("1 - Показать все задачи");
         System.out.println("2 - Добавить задачу");
@@ -54,6 +57,7 @@ public class TodoList {
     }
 
     public static void showAllTasks() {
+        // Отобразить все доступные задачи
         if (todoList.isEmpty()) {
             System.out.println("В списке ещё нет задач.");
             return;
@@ -66,6 +70,7 @@ public class TodoList {
     }
 
     public static void addTask() {
+        // Добавление новой задачи
         System.out.println("Введите название новой задачи:");
         String task = scanner.nextLine();
         todoList.add(task);
@@ -73,6 +78,7 @@ public class TodoList {
     }
 
     public static void removeTask() {
+        // Удаление существующей задачи
         if (todoList.isEmpty()) {
             System.out.println("Нечего удалять, список пуст.");
             return;
